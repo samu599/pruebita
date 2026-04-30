@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz del Saber Futbolero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-decor"></div>
+
+  <!-- Pantalla inicial -->
+  <div class="start-screen" id="start-screen">
+    <div class="start-overlay"></div>
+    <div class="start-card">
+      <div class="icon-wrap">🏆</div>
+      <h1 class="start-title">Quiz del Saber Futbolero</h1>
+      <p class="start-desc">Demuestra tus conocimientos en este desafiante test. ¿Podrás acertar todas las preguntas?</p>
+      <button class="start-btn" id="start-btn">Comenzar Quiz <span class="btn-icon">▶</span></button>
+    </div>
+  </div>
+
+  <div class="qwrap" id="qwrap" style="display: none;">
+    <header class="qheader">
+      <div class="qtitle">Quiz del Saber Futbolero ⚽</div>
+      <div class="qsubtitle">Preguntas serias para gente seria</div>
+    </header>
+
+    <div class="hud">
+      <div class="hud-card"><div class="hud-val" id="hud-q">1/5</div><span>Pregunta</span></div>
+      <div class="hud-card"><div class="hud-val" id="hud-pts">0</div><span>Puntos</span></div>
+      <div class="hud-card timer-card"><div class="hud-val" id="hud-time">15</div><span>Segundos</span></div>
+    </div>
+
+    <div class="progress-dots" id="progress-dots"></div>
+
+    <div class="timer-bar-wrap">
+      <div class="timer-bar" id="timer-bar"></div>
+    </div>
+
+    <main class="qcard" id="qcard-main">
+      <div class="qimg-wrap">
+        <img id="qimg" src="" alt="Pregunta Imagen" class="qimg" />
+      </div>
+      <div class="qinfo">
+        <div class="qnum" id="qnum">Pregunta 1 de 5</div>
+        <div class="qtext" id="qtext"></div>
+        <div class="qsub" id="qsub"></div>
+      </div>
+    </main>
+
+    <div class="ans-grid" id="ans-grid"></div>
+    
+    <div class="joke-box" id="joke-box"></div>
+    
+    <button class="next-btn" id="next-btn" style="display: none;">Siguiente pregunta <span>→</span></button>
+
+    <div class="result-wrap" id="result-wrap"></div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
